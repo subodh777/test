@@ -7,7 +7,7 @@ RUN yum install -y httpd \
  WORKDIR /var/www/html
  RUN unzip romofyi.zip
  RUN cp -rvf romofyi/* .
- RUN rm romofyi  romofyi.zip
+ RUN rm -rf romofyi  romofyi.zip
  CMD ["/usr/sbin/httpd", "-D",  "FOREGROUND"]
  EXPOSE 80
  
